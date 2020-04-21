@@ -36,14 +36,25 @@ public class LoginPageObject extends Base {
 	 */
 
 	public void clickOnTestEnvironmentLink() {
-		testEnvironmentLink.sendKeys(Keys.ENTER);;
+		testEnvironmentLink.sendKeys(Keys.ENTER);
 
+		 Set<String> WindowHandels = driver.getWindowHandles();
+        //2. Use Iterator to iterate in window Handlers SET
+        Iterator<String> it = WindowHandels.iterator();
+        //3. store Parent window handler in a sting
+        String parentWindow = it.next();
+        //4. store child window handler in a srting
+        String childWindow = it.next();
+        //5. use SwithTo.Window method for switching from parent to child
+        driver.switchTo().window(childWindow);
+		
+		
 	}
 	/**
 	 * 
 	 */
 	public void clickOnloginToClassLink() {
-		loginToClassLink.sendKeys(Keys.ENTER);;
+		loginToClassLink.sendKeys(Keys.ENTER);
 	}
 /**
  * This method will enter email value in Subscribe email field in TekSchool
