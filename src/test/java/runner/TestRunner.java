@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "classpath:Features", // path to feature files
 glue = { "stepDefinitions" }, // path to step definitions 
-tags = {"@Currency"}, // tags to run on feature level or scenario level
+tags = {"@AddToWishList_007"}, // tags to run on feature level or scenario level
 dryRun = false, // if false: check if all the steps in feature file has steps in step definitions
 monochrome = true, // display the console output in readable way
 strict = false, // if set to false will fail if there are pending or undefined steps.
